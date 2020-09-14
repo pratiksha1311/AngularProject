@@ -1,0 +1,18 @@
+{
+  "feedbacks": [
+    {
+      "fname": "Raj Rathod",
+      "femail": "raj@gmail.com",
+      "fcontact": "9087361213",
+      "fmsg": "Hello guys,I have done shopping here.I bought necklace for my mom and it has very unique design.It is a very good and trustworthy.",
+      "id": 1
+    },
+    {
+      "fname": "Sonali Kamble",
+      "femail": "sona@gmail.com",
+      "fcontact": "8888456312",
+      "fmsg": "Best and unique collection.",
+      "id": 2
+    }
+  ]
+}

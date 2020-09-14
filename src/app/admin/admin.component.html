@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/hom">Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="/hom">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/abo">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/con">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sign">SignUp</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           LogIn
+          </a><span class="sr-only">(current)</span>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item active" href="/adminlog">Admin</a>
+            <a class="dropdown-item" href="/log">User</a>
+          </div>
+        </li>
+       <!-- <li class="nav-item">
+          <a class="nav-link" href="/hom" style="color: red;margin-left: 800px;"><i class="fa fa-fw fa-sign-out"></i>LogOut</a>
+        </li>-->
+      </ul>
+    </div>
+  </nav>
+   
+  
+  <div  [style.background]="'url(../../assets/back.jpg)'"><br><br><br><br>
+
+    <div style="background-color: white;margin-left: 360px;margin-right: 360px;height: 450px;" ><br>
+      
+      <h3 style="margin-left: 200px;color: violet;">Admin LogIn</h3>
+       <i class="fa fa-fw fa-user i1"></i><label class="l"><b>UserName </b></label><br>
+       <input  type="text"  placeholder="Enter UserName" style="margin-left: 100px;width: 50%;"  required/><br><br>
+    
+       <i class="fa fa-fw fa-key i1"></i><label class="l"><b>Password</b> </label><br>
+       <input type="{{inputType}}"  placeholder="Enter Password" style="margin-left: 100px;width: 50%;" required/>&nbsp;&nbsp;
+       <button class="btn btn-border:none;" (click)="show();">
+        <i class="fa fa-fw fa-eye"></i></button><br><br>
+
+      <br><br>  <a class="btn btn-success" href="/view" type="submit"   style="margin-left: 180px;height: 55px;width:73px;">LogIn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset"  class="btn btn-danger" style="height: 55px;width:73px;">Cancel</button>
+        <br/> <br/><a href="/sign" class="a111"><b>Create new Account</b></a>
+  </div><br><br>
+
+</div>
+

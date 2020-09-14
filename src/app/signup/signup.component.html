@@ -1,0 +1,143 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/hom">Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="/hom">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/abo">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/con">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/sign">SignUp</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle "  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           LogIn
+          </a><span class="sr-only">(current)</span>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/adminlog">Admin</a>
+            <a class="dropdown-item" href="/log">User</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div [style.background]="'url(../../assets/back.jpg)'" ><br><br>
+    <form [formGroup]="form" (ngSubmit)="signup()">
+    <table class="table table-border jumbotron" style="text-align: center;" align="center" style="width: 600px;">
+        <tr>
+            <th><br>&nbsp;&nbsp;UserName</th>
+            <td><br> &nbsp;&nbsp;
+                <input  type="text" name="uname"  placeholder="Enter username" 
+                maxlength="15"	spellcheck="true" required autofocus autocomplete="on" formControlName="username"/><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Password</th>
+            <td><br>&nbsp;&nbsp;
+            <input type="password" name="pwd" placeholder="Enter password" formControlName="password"/><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Address</th>
+            <td><br>&nbsp;&nbsp;
+                <textarea  name="addr" rows="4" cols="24" formControlName="address"></textarea><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;EmailId</th>
+            <td><br>&nbsp;&nbsp;
+                <input type="email" name="id" placeholder="Enter emailid" required formControlName="emailid"/><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;DOB</th>
+            <td><br>&nbsp;&nbsp;
+                <input  type="date" name="dob" formControlName="dob"/><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Gender	</th>
+            <td><br>&nbsp;&nbsp;
+            <input type="radio"  value="male" formControlName="gender">&nbsp;
+            <label>Male</label>&nbsp;
+            <input type="radio"  value="female" formControlName="gender">&nbsp;
+            <label>Female</label>&nbsp;
+            <input type="radio"  value="other" formControlName="gender">&nbsp;
+            <label>Other</label><br><br>
+            </td>
+        </tr>	
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Contact No.</th>
+            <td><br>&nbsp;&nbsp;
+                <input type="tel" id="mob" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
+                placeholder="8356-456-248" maxlength="13" formControlName="contact"/><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Resident Country</th>
+            <td><br>&nbsp;&nbsp;
+            <select formControlName="country">
+                <option *ngFor="let c of country" [value]="c">{{c}}</option>
+               
+            </select><br><br>
+            </td>
+        </tr>
+        
+        <tr>
+        <td colspan="2"><br>
+        
+            <button type="submit" class="btn btn-success b">SignUp</button>
+            <button type="reset" class="btn btn-danger" style="margin-left: 80px;">Clear</button></td><br><br><br>
+        
+        </tr>
+      
+        
+        </table><br><br>
+        </form>
+</div>
+
+
+
+<!--
+<h2 class="text-center">Registration</h2>
+<div class="row">
+<div class="col-md-3">
+</div>
+<div class="col-md-6 col-md-offset-3">
+<div class="jumbotron">
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" name="name" formControlName="name" autocomplete="off" class="form-control input-sm" placeholder="Name">
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="Password">Password</label>
+<input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+</div>
+<button type="submit" class="btn btn-success" >Register</button>
+</form>
+</div>
+</div>
+<div class="col-md-3">
+</div>
+</div>-->

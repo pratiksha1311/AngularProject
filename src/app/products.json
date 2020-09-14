@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "product_code": "c11",
+      "product_img": "C:\\fakepath\\diamond_necklace.jpg",
+      "product_desc": "Original American Diamond",
+      "product_price": "2850",
+      "id": 1
+    },
+    {
+      "product_code": "c12",
+      "product_img": "C:\\fakepath\\gold_earrings.jpg",
+      "product_desc": "Golden Multicolor Earings",
+      "product_price": "540",
+      "id": 2
+    },
+    {
+      "product_code": "c13",
+      "product_img": "C:\\fakepath\\oxidised_bangle.jpg",
+      "product_desc": "Traditional german silver plated bangles",
+      "product_price": "299",
+      "id": 3
+    },
+    {
+      "product_code": "c14",
+      "product_img": "C:\\fakepath\\gold_necklace.jpg",
+      "product_desc": "Golden Necklace",
+      "product_price": "6400",
+      "id": 4
+    },
+    {
+      "product_code": "c15",
+      "product_img": "C:\\fakepath\\oxidized-earrings.jpg",
+      "product_desc": "Oxidized Earings",
+      "product_price": "250",
+      "id": 5
+    },
+    {
+      "product_code": "c16",
+      "product_img": "C:\\fakepath\\oxidised_necklace.jpg",
+      "product_desc": "Traditional Oxidized necklace",
+      "product_price": "599",
+      "id": 6
+    },
+    {
+      "product_code": "c17",
+      "product_img": "C:\\fakepath\\diamond_bangle.jpg",
+      "product_desc": "American Diamond bangles",
+      "product_price": "649",
+      "id": 7
+    },
+    {
+      "product_code": "c18",
+      "product_img": "C:\\fakepath\\jhumka.jpg",
+      "product_desc": "Traditional Jhumka ",
+      "product_price": "199",
+      "id": 8
+    }
+  ]
+}

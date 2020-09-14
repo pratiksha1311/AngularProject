@@ -1,0 +1,26 @@
+{
+  "signups": [
+    {
+      "username": "pratiksha",
+      "password": "pratiksha",
+      "address": "aditya nagar,solapur",
+      "emailid": "p@gmail.com",
+      "dob": "1994-11-13",
+      "gender": "female",
+      "contact": "9876543210",
+      "country": "India",
+      "id": 1
+    },
+    {
+      "username": "",
+      "password": "",
+      "address": "",
+      "emailid": "",
+      "dob": "",
+      "gender": "",
+      "contact": "",
+      "country": "India",
+      "id": 2
+    }
+  ]
+}

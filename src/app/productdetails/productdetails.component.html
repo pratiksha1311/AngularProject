@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/hom">Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="/hom">Home</a>
+        </li>
+        
+       
+        <li class="nav-item">
+          <a style=" margin-left: 800px;" class="nav-link" href="/view">View</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/fed">Feedback</a>
+        </li>
+        <li class="nav-item">
+      
+          <a href="/hom" style="color:red;" class="nav-link"><i class="fa fa-fw fa-sign-out"></i>LogOut</a>
+       </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><label style="color: white;background-color: teal;">Welcome Admin</label></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+<div [style.background]="'url(../../assets/back.jpg)'" ><br><br>
+  <h3 style="color: white;margin-left: 550px;">Product Details</h3>
+    <form [formGroup]="form" (ngSubmit)="add()">
+    <table class="table table-border jumbotron" style="text-align: center;" align="center" style="width: 600px;">
+        <tr>
+            <th><br>&nbsp;&nbsp;Product Code</th>
+            <td><br> &nbsp;&nbsp;
+                <input type="text" formControlName="product_code" placeholder="Enter Product code" style="width: 200px;"><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Product image</th>
+            <td><br>&nbsp;&nbsp;
+                <input type="file" formControlName="product_img" ><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Product Description</th>
+            <td><br>&nbsp;&nbsp;
+                <textarea type="text" formControlName="product_desc" style="height: 80px;width: 200px;" ></textarea><br>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><br>&nbsp;&nbsp;Product Price</th>
+            <td><br>&nbsp;&nbsp;
+                <input type="text" formControlName="product_price" placeholder="Enter product price" style="width: 200px;"><br>
+            </td>
+        </tr>
+        
+        
+        <tr>
+        <td colspan="2"><br>
+        
+            <button type="submit" class="btn btn-success " style="margin-left: 170px;">Add</button>
+            <button type="reset" class="btn btn-danger" style="margin-left: 80px;">Clear</button></td><br><br><br>
+        
+        </tr>
+        
+        
+        </table><br><br>
+        </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
