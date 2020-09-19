@@ -1,47 +1,46 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="/hom">Shop</a>
+    <a class="btn btn-outline-primary btn-md navbar-brand" href="/hom">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="/hom">Home</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/abo">About</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/con">Contact</a>
-        </li>
+    
+        
         <li class="nav-item">
-          <a class="nav-link" href="/sign">SignUp</a>
+          <a class="btn btn-outline-primary btn-md" href="/sign">SignUp</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="btn btn-outline-primary btn-md dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            LogIn
           </a><span class="sr-only">(current)</span>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item active" href="/adminlog">Admin</a>
             <a class="dropdown-item" href="/log">User</a>
           </div>
+        </li>  
+        <li class="nav-item ">
+          <a class="btn btn-outline-primary btn-md" href="/abo">About</a>
         </li>
-        
+        <li class="nav-item ">
+          <a class="btn btn-outline-primary btn-md active" href="/con">Contact</a>
+        </li>      
       </ul>
     </div>
   </nav>
+  
   <div  [style.background]="'url(../../assets/back.jpg)'"><br><br><br><br>
 
     <div style="background-color: white;margin-left: 360px;margin-right: 360px;height: 650px;" ><br>
       <form [formGroup]="form" (ngSubmit)="send();">
       <label style="margin-left:100px;"><b> Name</b></label><br/> 
-      <input  class="in" type="text"  formControlName="fname" placeholder="Enter Name" /><br><br>
+      <input  class="in" type="text"  formControlName="fname" name="fname" placeholder="Enter Name" /><br><br>
       <label style="margin-left:100px;"><b> EmailId</b></label><br/> 
-      <input  class="in" type="text" formControlName="femail" placeholder="Enter EmailId" /><br><br>
+      <input  class="in" type="text" formControlName="femail" name="femail" placeholder="Enter EmailId" /><br><br>
       <label style="margin-left:100px;"><b> Contact</b></label><br/> 
-      <input  class="in" type="text" formControlName="fcontact" placeholder="Enter Contact number" /><br><br>
+      <input  class="in" type="text" formControlName="fcontact" name="fcontact" placeholder="Enter Contact number" /><br><br>
       <label style="margin-left:100px;"><b> Message</b></label><br/> 
-      <textarea style="height: 100px;width: 400px;margin-left: 100px;" formControlName="fmsg"></textarea><br><br>
+      <textarea style="height: 100px;width: 400px;margin-left: 100px;" name="fmsg" formControlName="fmsg"></textarea><br><br>
       <button class="btn btn-success" style="margin-left: 50px;height: 40px;width: 500px;font-size: 23px;" type="submit"> Send</button><br/><br/>
       <label style="margin-left:140px;color: crimson;"><b> Contact our 24/7 call center +012 246 3487</b></label><br/> 
     </form>

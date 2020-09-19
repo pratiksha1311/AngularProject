@@ -1,30 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="/hom">Shop</a>
+    <a class="btn btn-outline-primary btn-md navbar-brand" href="/hom">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="/hom">Home</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/abo">About</a>
-        </li>
+       
+        
         <li class="nav-item">
-          <a class="nav-link" href="/con">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/sign">SignUp</a>
+          <a class="btn btn-outline-primary btn-md active" href="/sign">SignUp</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle "  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="btn btn-outline-primary btn-md dropdown-toggle "  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            LogIn
           </a><span class="sr-only">(current)</span>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/adminlog">Admin</a>
             <a class="dropdown-item" href="/log">User</a>
           </div>
+        </li>
+        <li class="nav-item ">
+          <a class="btn btn-outline-primary btn-md" href="/abo">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary btn-md" href="/con">Contact</a>
         </li>
       </ul>
     </div>
@@ -36,36 +35,37 @@
         <tr>
             <th><br>&nbsp;&nbsp;UserName</th>
             <td><br> &nbsp;&nbsp;
-                <input  type="text" name="uname"  placeholder="Enter username" 
-                maxlength="15"	spellcheck="true" required autofocus autocomplete="on" formControlName="username"/><br><br>
-            </td>
+                <input  type="text" name="uname"  placeholder="Enter username" style="height: 40px;width: 230px;"
+                maxlength="15"	  autofocus  formControlName="username" required/><br><br>
+                <div style="margin-left: 2px;" class="alert alert-danger" *ngIf="form.get('username').invalid && form.get('username').touched">This field is required</div>
+              </td>
         </tr>
         
         <tr>
             <th><br>&nbsp;&nbsp;Password</th>
             <td><br>&nbsp;&nbsp;
-            <input type="password" name="pwd" placeholder="Enter password" formControlName="password"/><br><br>
+            <input type="password" name="pwd" placeholder="Enter password" formControlName="password" style="height: 40px;width: 230px;"/><br><br>
             </td>
         </tr>
         
         <tr>
             <th><br>&nbsp;&nbsp;Address</th>
             <td><br>&nbsp;&nbsp;
-                <textarea  name="addr" rows="4" cols="24" formControlName="address"></textarea><br><br>
+                <textarea  name="addr" rows="4" cols="30" formControlName="address" ></textarea><br><br>
             </td>
         </tr>
         
         <tr>
             <th><br>&nbsp;&nbsp;EmailId</th>
             <td><br>&nbsp;&nbsp;
-                <input type="email" name="id" placeholder="Enter emailid" required formControlName="emailid"/><br><br>
+                <input type="email" name="id" placeholder="Enter emailid" required formControlName="emailid" style="height: 40px;width: 230px;"/><br><br>
             </td>
         </tr>
         
         <tr>
             <th><br>&nbsp;&nbsp;DOB</th>
             <td><br>&nbsp;&nbsp;
-                <input  type="date" name="dob" formControlName="dob"/><br><br>
+                <input  type="date" name="dob" formControlName="dob" style="height: 40px;width: 230px;"/><br><br>
             </td>
         </tr>
         
@@ -84,15 +84,15 @@
         <tr>
             <th><br>&nbsp;&nbsp;Contact No.</th>
             <td><br>&nbsp;&nbsp;
-                <input type="tel" id="mob" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
-                placeholder="8356-456-248" maxlength="13" formControlName="contact"/><br><br>
+                <input type="tel" id="mob" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" style="height: 40px;width: 230px;"
+                placeholder="8356-456-248" maxlength="10" formControlName="contact"/><br><br>
             </td>
         </tr>
         
         <tr>
             <th><br>&nbsp;&nbsp;Resident Country</th>
             <td><br>&nbsp;&nbsp;
-            <select formControlName="country">
+            <select formControlName="country" style="height: 40px;width: 230px;">
                 <option *ngFor="let c of country" [value]="c">{{c}}</option>
                
             </select><br><br>
@@ -102,8 +102,9 @@
         <tr>
         <td colspan="2"><br>
         
-            <button type="submit" class="btn btn-success b">SignUp</button>
-            <button type="reset" class="btn btn-danger" style="margin-left: 80px;">Clear</button></td><br><br><br>
+            <button type="submit" class="btn btn-success b" >SignUp</button>&nbsp;&nbsp;
+            <button type="reset" class="btn btn-danger" style=" height: 40px;
+            width: 230px;">Clear</button></td><br><br><br>
         
         </tr>
       

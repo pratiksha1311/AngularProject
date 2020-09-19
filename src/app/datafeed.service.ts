@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient,HttpErrorResponse} from '@angular/common/http';
 
 const api="http://localhost:2222/feedbacks/";
 @Injectable({
@@ -7,7 +7,7 @@ const api="http://localhost:2222/feedbacks/";
 })
 
 export class DatafeedService {
-  saveData(data){
+ public saveData(data){
     return this.httpclient.post(api,data);
   }
   getData(){

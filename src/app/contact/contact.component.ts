@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit {
   send(){
     this.datafeedservice.saveData(this.form.value).subscribe((res)=>
     {
-      alert("Thank You for Your Feedback.");
+       alert("Thank You for Your Feedback.");
     })
   }
 

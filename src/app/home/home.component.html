@@ -1,25 +1,19 @@
 
+  
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand" href="/hom">Shop</a>
+  <a class="btn btn-outline-primary btn-md navbar-brand" href="/hom"><i class="fa fa-fw fa-home"></i> Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item ">
-        <a class="nav-link active" href="/hom">Home</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="/abo">About</a>
-      </li>
+     
+      
       <li class="nav-item">
-        <a class="nav-link" href="/con">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/sign">SignUp</a>
+        <a class="btn btn-outline-primary btn-md  hover"  href="/sign">SignUp</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-outline-primary btn-md dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          LogIn
         </a><span class="sr-only">(current)</span>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -27,7 +21,16 @@
           <a class="dropdown-item" href="/log">User</a>
         </div>
       </li>
+      <li class="nav-item ">
+        <a class="btn btn-outline-primary btn-md " href="/abo">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-primary btn-md " href="/con">Contact</a>
+      </li>
     </ul>
+    
+      <input style="margin-left: 700px;" class="form-control" id="myInput" type="text" placeholder="Search Here" [(ngModel)]="term"/>
+  
   </div>
 </nav>
   
@@ -64,19 +67,25 @@
 <div class="container-fluid border border-primary " style="text-align: center;">
   <form [formGroup]="form" (ngSubmit)="add()">
     <div class="row">
-      <div class="col-md-3 border border-info" style="background-color:MintCream;" *ngFor="let p of product">
-            <br><label><b>Product code :</b>&nbsp;&nbsp;</label><b>{{p.product_code}}</b><br>
-                {{p.product_img}}<br>
+      <div class="card col-md-3  border border-info" style="background-color:MintCream;" *ngFor="let p of product |filter:term">
+           <!-- <br><label><b>Product code :</b>&nbsp;&nbsp;</label><b>{{p.product_code}}</b><br>-->
+                
+            
+        <img src="{{imageDirectoryUrl}}{{p.product_img}}" (change)="readUrl($event)" alt="image"><br>
+            
+            
+          <!--  {{p.product_img}}<br>-->
                 <b>{{p.product_desc}}</b><br>
-            <label><b>Price :&nbsp;</b></label><b>&#8377;{{p.product_price}}</b> <br>
-            <input type="number" placeholder="Quantity"><br><br>
-            <a  href="/log" class="btn btn-info "  style="width: 200px;"> Add to cart</a> <br><br>             
+          <!--  <label><b>Price :&nbsp;</b></label><b>&#8377;{{p.product_price}}</b> <br>-->
+           <!-- <input type="number" placeholder="Quantity"><br><br>-->
+            <a  [routerLink]="['/myor',p.id]" class="btn btn-info "  style="width: 200px;margin-left: 50px;"> Add to cart</a> <br><br>             
       </div>
     </div>
     </form>
 </div>
       
-     
+  
+
 
 <div class="card-footer bg-dark  stricky-bottom">
   <div class="container">

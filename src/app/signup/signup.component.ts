@@ -4,7 +4,6 @@ import {FormControl,FormGroup, FormBuilder, Validators, NgForm} from '@angular/f
 import { ValueService } from '../value.service';
 
 
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,7 +13,7 @@ export class SignupComponent implements OnInit {
 
   form:FormGroup;
   angForm:any;
-  
+ 
   country:string[]=["India","USA","Japan","Swedan"];
  
   
@@ -25,19 +24,19 @@ export class SignupComponent implements OnInit {
   }
   constructor(private valueservice:ValueService,private fb: FormBuilder) {
 
-    this.angForm = this.fb.group({
+   /* this.angForm = this.fb.group({
       email: ['', [Validators.required,Validators.minLength(1), Validators.email]],
       password: ['', Validators.required],
       name: ['', Validators.required],
       mobile: ['', Validators.required]
-      });
+      });*/
    }
 
   ngOnInit(): void {
-   
+
 
     this.form=new FormGroup({
-      username:new FormControl(""),
+      username:new FormControl("",[Validators.required,Validators.pattern("[a-zA-Z ]*")]),
     password:new FormControl(""),
     address:new FormControl(""),
     emailid:new FormControl(""),

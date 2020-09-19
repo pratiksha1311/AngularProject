@@ -14,6 +14,8 @@ export class ProductdetailsComponent implements OnInit {
   
  
 
+  
+
   add(){
   // this.product.push(this.form.value);
       this.dataservice.saveData(this.form.value).subscribe((res)=>{

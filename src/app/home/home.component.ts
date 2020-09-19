@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import {FormGroup,FormControl} from '@angular/forms'; 
-
-
+import {AddtocartService} from '../addtocart.service';
+import {ActivatedRoute,Router} from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -27,19 +27,31 @@ export class HomeComponent implements OnInit {
 
   product:any=[];
   form:FormGroup;
-  constructor(private dataservice:DataService) { }
-  add(){
-    // this.product.push(this.form.value);
-        this.dataservice.saveData(this.form.value).subscribe((res)=>{
-            alert("data save successfully");
-        })
-    }
+ term:any;
+id:number;
+
+  constructor(private dataservice:DataService,private addtocartservice:AddtocartService,private activatedroute:ActivatedRoute) { }
+  
+    add(){
+      // this.product.push(this.form.value);
+          this.dataservice.getId(this.id,this.form.value).subscribe((res)=>{
+              alert("data save successfully");
+          })
+      }
   getProductData(){
     this.dataservice.getData().subscribe((res)=>{
         this.product=res;
-    })
+    })    
 }
+
+
+
+
   ngOnInit(): void {
+    this.activatedroute.params.subscribe((param)=>{
+      this.id=param["id"];
+      console.log(this.id);
+    })
    this.getProductData();
    this.form=new FormGroup(
     {

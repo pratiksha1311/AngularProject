@@ -8,6 +8,7 @@ import { DataService } from '../data.service';
 })
 export class ViewproductsComponent implements OnInit {
   product:any=[];
+  p:number=1;
   constructor(private dataservice:DataService) { }
   delete(id){
     this.dataservice.deleteData(id).subscribe((res)=>{

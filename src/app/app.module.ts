@@ -21,6 +21,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import {DatafeedService} from './datafeed.service';
 import { ViewproductsComponent } from './viewproducts/viewproducts.component';
 import { UpdateproductsComponent } from './updateproducts/updateproducts.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { AddtocartService } from './addtocart.service';
 
 
 @NgModule({
@@ -46,10 +49,12 @@ import { UpdateproductsComponent } from './updateproducts/updateproducts.compone
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
     
   ],
-  providers: [DataService,ValueService,DatafeedService],
+  providers: [DataService,ValueService,DatafeedService,AddtocartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,7 +11,7 @@
       "product_code": "c12",
       "product_img": "C:\\fakepath\\gold_earrings.jpg",
       "product_desc": "Golden Multicolor Earings",
-      "product_price": "540",
+      "product_price": "600",
       "id": 2
     },
     {
@@ -32,7 +32,7 @@
       "product_code": "c15",
       "product_img": "C:\\fakepath\\oxidized-earrings.jpg",
       "product_desc": "Oxidized Earings",
-      "product_price": "250",
+      "product_price": "550",
       "id": 5
     },
     {
@@ -51,9 +51,9 @@
     },
     {
       "product_code": "c18",
-      "product_img": "C:\\fakepath\\jhumka.jpg",
-      "product_desc": "Traditional Jhumka ",
-      "product_price": "199",
+      "product_img": "C:\\fakepath\\gold_necklace.jpg",
+      "product_desc": "golden necklace",
+      "product_price": "2500",
       "id": 8
     }
   ]

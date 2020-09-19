@@ -17,6 +17,10 @@ export class DataService {
     return this.httpclient.get(api+id);
   }
 
+  getId(id,data){
+    return this.httpclient.get(api+id,data);
+  }
+
   getData(){
       return this.httpclient.get(api);
   }

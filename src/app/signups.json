@@ -21,6 +21,28 @@
       "contact": "",
       "country": "India",
       "id": 2
+    },
+    {
+      "username": "rahul",
+      "password": "rahul",
+      "address": "pune",
+      "emailid": "r@gmail.com",
+      "dob": "1999-10-12",
+      "gender": "male",
+      "contact": "9876543210",
+      "country": "USA",
+      "id": 3
+    },
+    {
+      "username": "pratiksha",
+      "password": "pratiksha",
+      "address": "solapur",
+      "emailid": "pratiksha@gmail.com",
+      "dob": "1995-11-13",
+      "gender": "female",
+      "contact": "9876543210",
+      "country": "India",
+      "id": 4
     }
   ]
 }

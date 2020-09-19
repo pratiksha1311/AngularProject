@@ -13,6 +13,20 @@
       "fcontact": "8888456312",
       "fmsg": "Best and unique collection.",
       "id": 2
+    },
+    {
+      "fname": "Sweety Sathe",
+      "femail": "s@gmail.com",
+      "fcontact": "8978654321",
+      "fmsg": "Nice products",
+      "id": 3
+    },
+    {
+      "fname": "siddhali",
+      "femail": "s@gmail.com",
+      "fcontact": "8965432132",
+      "fmsg": "very nice products",
+      "id": 4
     }
   ]
 }

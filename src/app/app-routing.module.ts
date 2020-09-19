@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:"hom",component:HomeComponent},
   {path:"sign",component:SignupComponent},
   {path:"prodetails",component:ProductdetailsComponent},
-  {path:"myor",component:MyorderComponent},
+  {path:"myor/:id",component:MyorderComponent},
   {path:"adminlog",component:AdminComponent},
   {path:"con",component:ContactComponent},
   {path:"abo",component:AboutComponent},
@@ -31,7 +31,7 @@ const routes: Routes = [
 {path:"fed",component:FeedbackComponent},
 {path:"view",component:ViewproductsComponent},
   {path:"update/:id",component:UpdateproductsComponent}
- 
+ //{path:"**",component:HomeComponent}
  
 ];
 
